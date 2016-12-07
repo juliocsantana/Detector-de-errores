@@ -29,19 +29,19 @@ soluciones('verificar_medidas_de_frio_y_calor','conexion').
 
 
 %	Sintomas de falla en compresor
-sintom(F):- problemade(F,'no_enfria'),
+error(F):- problemade(F,'no_enfria'),
 	    problemade(F,'ningun_sonido'),
 	    problemade(F,'compresor_defectuoso').
 
 %	Sintomas de falla por mantenimiento
 
-sintom(F):- problemade(F,'no_enfria'),
+error(F):- problemade(F,'no_enfria'),
 	    problemade(F,'falta_gas').
 
 
 %	Sintomas de falla de conexion electrica
 
-sintom(F):- problemade(F,'no_enciende'),
+error(F):- problemade(F,'no_enciende'),
 	    problemade(F,'conexiones_electricas_inadecuadas').
 
 %	Problemas
